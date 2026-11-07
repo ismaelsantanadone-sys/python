@@ -17,3 +17,4 @@ C:\Users\HP\source\repos\proyecto_final\obj\Debug\net10.0-windows\proyecto.67F5D
 C:\Users\HP\source\repos\proyecto_final\obj\Debug\net10.0-windows\proyecto_final.Ventana_login.resources
 C:\Users\HP\source\repos\proyecto_final\obj\Debug\net10.0-windows\proyecto_final.Nucleo.resources
 C:\Users\HP\source\repos\proyecto_final\obj\Debug\net10.0-windows\proyecto_final.Properties.Resources.resources
+C:\Users\HP\source\repos\proyecto_final\obj\Debug\net10.0-windows\proyecto_final.sourcelink.json

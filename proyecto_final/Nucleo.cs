@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace proyecto_final
@@ -29,9 +30,9 @@ namespace proyecto_final
             {
                 e.Handled = true;
             }
-            Calcular.Enabled=!string .IsNullOrEmpty(Practica1.Text)&& !string.IsNullOrEmpty(nombre.Text)&& !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
-             && !string.IsNullOrEmpty(Examen1.Text) && !string.IsNullOrEmpty(Examen2.Text) && !string.IsNullOrEmpty(Examen3.Text) && !string.IsNullOrEmpty(calf2.Text)
-             && !string.IsNullOrEmpty(calf3.Text) && !string.IsNullOrEmpty(Practica1.Text);
+            Calcular.Enabled=!string .IsNullOrEmpty(calificacion1.Text)&& !string.IsNullOrEmpty(nombre.Text)&& !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
+             && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
+             && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
 
         }
 
@@ -47,9 +48,9 @@ namespace proyecto_final
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Calcular.Enabled = !string.IsNullOrEmpty(Practica1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
-            && !string.IsNullOrEmpty(Examen1.Text) && !string.IsNullOrEmpty(Examen2.Text) && !string.IsNullOrEmpty(Examen3.Text) && !string.IsNullOrEmpty(calf2.Text)
-            && !string.IsNullOrEmpty(calf3.Text) && !string.IsNullOrEmpty(Practica1.Text);
+            Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
+            && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
+            && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
             nombre.MaxLength = 15;
 
         }
@@ -80,66 +81,70 @@ namespace proyecto_final
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            Calcular.Enabled = !string.IsNullOrEmpty(Practica1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
-            && !string.IsNullOrEmpty(Examen1.Text) && !string.IsNullOrEmpty(Examen2.Text) && !string.IsNullOrEmpty(Examen3.Text) && !string.IsNullOrEmpty(calf2.Text)
-            && !string.IsNullOrEmpty(calf3.Text) && !string.IsNullOrEmpty(Practica1.Text);
+            Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
+            && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
+            && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            Calcular.Enabled = !string.IsNullOrEmpty(Practica1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
-            && !string.IsNullOrEmpty(Examen1.Text) && !string.IsNullOrEmpty(Examen2.Text) && !string.IsNullOrEmpty(Examen3.Text) && !string.IsNullOrEmpty(calf2.Text)
-            && !string.IsNullOrEmpty(calf3.Text) && !string.IsNullOrEmpty(Practica1.Text);
+            Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
+            && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
+            && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            Calcular.Enabled = !string.IsNullOrEmpty(Practica1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
-              && !string.IsNullOrEmpty(Examen1.Text) && !string.IsNullOrEmpty(Examen2.Text) && !string.IsNullOrEmpty(Examen3.Text) && !string.IsNullOrEmpty(calf2.Text)
-              && !string.IsNullOrEmpty(calf3.Text) && !string.IsNullOrEmpty(Practica1.Text);
+            Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
+              && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
+              && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            Calcular.Enabled = !string.IsNullOrEmpty(Practica1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
-             && !string.IsNullOrEmpty(Examen1.Text) && !string.IsNullOrEmpty(Examen2.Text) && !string.IsNullOrEmpty(Examen3.Text) && !string.IsNullOrEmpty(calf2.Text)
-             && !string.IsNullOrEmpty(calf3.Text) && !string.IsNullOrEmpty(Practica1.Text);
+            Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
+             && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
+             && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
 
         }
 
         private void Calcular_Click(object sender, EventArgs e)
         {
-            Calcular.Enabled = !string.IsNullOrEmpty(Practica1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
-            && !string.IsNullOrEmpty(Examen1.Text) && !string.IsNullOrEmpty(Examen2.Text) && !string.IsNullOrEmpty(Examen3.Text) && !string.IsNullOrEmpty(calf2.Text)
-            && !string.IsNullOrEmpty(calf3.Text) && !string.IsNullOrEmpty(Practica1.Text);
+            Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
+            && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
+            && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
             float examen1,examen2, examen3;
             float practica1,practica2,practica3;
             double promedio, porcentaje_examen, porcentaje_practica;
             Calcular calcular = new Calcular();
-            if (float.TryParse(this.Practica1.Text, out examen1) &&
-                float.TryParse(Examen1.Text, out examen2) &&
-                float.TryParse(Examen2.Text, out examen3) &&
-                float.TryParse(Examen3.Text, out practica1) &&
-                float.TryParse(calf3.Text,out practica2)&&
-                float.TryParse(calf2.Text,out practica3))
+            if (float.TryParse(this.calificacion1.Text, out examen1) &&
+                float.TryParse(calificacion_examen1.Text, out examen2) &&
+                float.TryParse(calificacion_examen2.Text, out examen3) &&
+                float.TryParse(calificaion_examen3.Text, out practica1) &&
+                float.TryParse(calificacion3.Text,out practica2)&&
+                float.TryParse(calificacion2.Text,out practica3))
             {
               
-                promedio= calcular.Promedio(examen1, examen2, examen3, practica1, practica2, practica3);
+                promedio = calcular.Promedio(examen1, examen2, examen3, practica1, practica2, practica3);
                 porcentaje_examen = Math.Round(calcular.porcentaje_examen, 1);
-                porcentaje_practica = Math.Round(calcular.porcentaje_practica, 1);
-                porcentaje_practica = calcular.porcentaje_practica;
+                porcentaje_practica=Math.Round(calcular.porcentaje_practica, 1);
                 string nombre = this.nombre.Text;
                 string apellido = this.apellido.Text;
                 string matricula = this.matricula.Text;
 
-                dataGridView1.Rows.Add(nombre, apellido, matricula, examen1, examen2, examen3, practica1, practica2, practica3, porcentaje_examen, porcentaje_practica, promedio);
+                dataGridView1.Rows.Add(nombre, apellido, matricula, examen1, examen2, examen3, practica1, practica2, practica3, porcentaje_examen, porcentaje_practica, promedio,calcular.status);
 
             }
             else
             {
                 MessageBox.Show("Debes ingresar las calificaciones completas.");
             }
-
+            calificacion1.Clear();
+            calificacion2.Clear();
+            calificacion3.Clear();
+            calificacion_examen1.Clear();
+            calificacion_examen2.Clear();
+            calificaion_examen3.Clear();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -149,17 +154,17 @@ namespace proyecto_final
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            Calcular.Enabled = !string.IsNullOrEmpty(Practica1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
-            && !string.IsNullOrEmpty(Examen1.Text) && !string.IsNullOrEmpty(Examen2.Text) && !string.IsNullOrEmpty(Examen3.Text) && !string.IsNullOrEmpty(calf2.Text)
-            && !string.IsNullOrEmpty(calf3.Text) && !string.IsNullOrEmpty(Practica1.Text);
+            Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
+            && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
+            && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
             apellido.MaxLength = 30;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            Calcular.Enabled = !string.IsNullOrEmpty(Practica1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
-             && !string.IsNullOrEmpty(Examen1.Text) && !string.IsNullOrEmpty(Examen2.Text) && !string.IsNullOrEmpty(Examen3.Text) && !string.IsNullOrEmpty(calf2.Text)
-             && !string.IsNullOrEmpty(calf3.Text) && !string.IsNullOrEmpty(Practica1.Text);
+            Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
+             && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
+             && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
             matricula.MaxLength = 9;
         }
 
@@ -169,22 +174,22 @@ namespace proyecto_final
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            Calcular.Enabled = !string.IsNullOrEmpty(Practica1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
-            && !string.IsNullOrEmpty(Examen1.Text) && !string.IsNullOrEmpty(Examen2.Text) && !string.IsNullOrEmpty(Examen3.Text) && !string.IsNullOrEmpty(calf2.Text)
-            && !string.IsNullOrEmpty(calf3.Text) && !string.IsNullOrEmpty(Practica1.Text);
+            Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
+            && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
+            && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            Calcular.Enabled = !string.IsNullOrEmpty(Practica1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
-             && !string.IsNullOrEmpty(Examen1.Text) && !string.IsNullOrEmpty(Examen2.Text) && !string.IsNullOrEmpty(Examen3.Text) && !string.IsNullOrEmpty(calf2.Text)
-             && !string.IsNullOrEmpty(calf3.Text) && !string.IsNullOrEmpty(Practica1.Text);
-            if (float.TryParse(calf3.Text, out float valor))
+            Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
+             && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
+             && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
+            if (float.TryParse(calificacion3.Text, out float valor))
             {
                 if (valor > 100)
                 {
                     MessageBox.Show("El valor no puede ser mayor a 100.");
-                    calf3.Text = "100";
+                    calificacion3.Text = "100";
                 }
 
             }
@@ -193,17 +198,17 @@ namespace proyecto_final
         private void textBox5_Leave(object sender, EventArgs e)
         {
           
-            if (float.TryParse(Examen1.Text, out float valor))
+            if (float.TryParse(calificacion_examen1.Text, out float valor))
             {
                 if (valor > 100)
                 {
                     MessageBox.Show("El valor no puede ser mayor a 100.");
-                    Examen1.Text = "100";
+                    calificacion_examen1.Text = "100";
                 }
                 else if (valor < 50)
                 {
                     MessageBox.Show("El valor no puede ser menor a 50.");
-                    Examen1.Text = "50";
+                    calificacion_examen1.Text = "50";
                 }
             }
 
@@ -212,17 +217,17 @@ namespace proyecto_final
         private void textBox6_Leave(object sender, EventArgs e)
         {
            
-            if (float.TryParse(Examen2.Text, out float valor))
+            if (float.TryParse(calificacion_examen2.Text, out float valor))
             {
                 if (valor > 100)
                 {
                     MessageBox.Show("El valor no puede ser mayor a 100.");
-                    Examen2.Text = "100";
+                    calificacion_examen2.Text = "100";
                 }
                 else if (valor < 50)
                 {
                     MessageBox.Show("El valor no puede ser menor a 50.");
-                    Examen2.Text = "50";
+                    calificacion_examen2.Text = "50";
                 }
             }
         }
@@ -230,17 +235,17 @@ namespace proyecto_final
         private void textBox7_Leave(object sender, EventArgs e)
         {
            
-            if (float.TryParse(Examen3.Text, out float valor))
+            if (float.TryParse(calificaion_examen3.Text, out float valor))
             {
                 if (valor > 100)
                 {
                     MessageBox.Show("El valor no puede ser mayor a 100.");
-                    Examen3.Text = "100";
+                    calificaion_examen3.Text = "100";
                 }
                 else if (valor < 50)
                 {
                     MessageBox.Show("El valor no puede ser menor a 50.");
-                    Examen3.Text = "50";
+                    calificaion_examen3.Text = "50";
                 }
             }
         }
@@ -248,17 +253,17 @@ namespace proyecto_final
         private void textBox4_Leave(object sender, EventArgs e)
         {
            
-            if (float.TryParse(Practica1.Text, out float valor))
+            if (float.TryParse(calificacion1.Text, out float valor))
             {
                 if (valor > 100)
                 {
                     MessageBox.Show("El valor no puede ser mayor a 100.");
-                    Practica1.Text = "100";
+                    calificacion1.Text = "100";
                 }
                 else if (valor < 50)
                 {
                     MessageBox.Show("El valor no puede ser menor a 50.");
-                    Practica1.Text = "50";
+                    calificacion1.Text = "50";
                 }
             }
         }
@@ -266,34 +271,34 @@ namespace proyecto_final
         private void textBox9_Leave(object sender, EventArgs e)
         {
            
-            if (float.TryParse(calf2.Text, out float valor))
+            if (float.TryParse(calificacion2.Text, out float valor))
             {
                 if (valor > 100)
                 {
                     MessageBox.Show("El valor no puede ser mayor a 100.");
-                    calf2.Text = "100";
+                    calificacion2.Text = "100";
                 }
                 else if (valor < 50)
                 {
                     MessageBox.Show("El valor no puede ser menor a 50.");
-                    calf2.Text = "50";
+                    calificacion2.Text = "50";
                 }
             }
         }
 
         private void textBox8_Leave(object sender, EventArgs e)
         {
-            if (float.TryParse(calf3.Text, out float valor))
+            if (float.TryParse(calificacion3.Text, out float valor))
             {
                 if (valor > 100)
                 {
                     MessageBox.Show("El valor no puede ser mayor a 100.");
-                    calf3.Text = "100";
+                    calificacion3.Text = "100";
                 }
                 else if (valor < 50)
                 {
                     MessageBox.Show("El valor no puede ser menor a 50.");
-                    calf3.Text = "50";
+                    calificacion3.Text = "50";
                 }
             }
         }
@@ -320,6 +325,7 @@ namespace proyecto_final
         public float practica1, practica2,practica3;
         public float porcentaje_practica;
         public float porcentaje_examen;
+        public string status;
         public float Promedio(float valor1,float valor2,float valor3,float practica1, float practica2, float practica3)
         {this.calificacion1 = valor1;
          this.calificacion2 = valor2;
@@ -331,9 +337,18 @@ namespace proyecto_final
            porcentaje_examen = ((valor1 + valor2 + valor3)/3)*0.60f;
             float promedio = (porcentaje_examen)+(porcentaje_practica);
             int promedio_entero = (int)Math.Round(promedio);
+            if (promedio_entero >= 70) {
+                this.status = "Promovido";
 
+            }
+            else
+            {
+                this.status = "Reprobado";
+            }
             return promedio_entero;
         }
+
+
     }
 
 }

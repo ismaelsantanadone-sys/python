@@ -40,10 +40,10 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            Practica1 = new TextBox();
-            Examen1 = new TextBox();
-            Examen2 = new TextBox();
-            Examen3 = new TextBox();
+            calificacion1 = new TextBox();
+            calificacion_examen1 = new TextBox();
+            calificacion_examen2 = new TextBox();
+            calificaion_examen3 = new TextBox();
             menuStrip1 = new MenuStrip();
             registrosPasadosToolStripMenuItem = new ToolStripMenuItem();
             eliminarRegistrosToolStripMenuItem = new ToolStripMenuItem();
@@ -64,8 +64,8 @@
             porcentaje_practica = new DataGridViewTextBoxColumn();
             promedio = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
-            calf3 = new TextBox();
-            calf2 = new TextBox();
+            calificacion3 = new TextBox();
+            calificacion2 = new TextBox();
             label9 = new Label();
             label10 = new Label();
             menuStrip1.SuspendLayout();
@@ -178,45 +178,45 @@
             label8.TabIndex = 10;
             label8.Text = "Primer examen";
             // 
-            // Practica1
+            // calificacion1
             // 
-            Practica1.Location = new Point(530, 672);
-            Practica1.Name = "Practica1";
-            Practica1.Size = new Size(109, 31);
-            Practica1.TabIndex = 11;
-            Practica1.TextChanged += textBox4_TextChanged;
-            Practica1.KeyPress += textBox4_KeyPress;
-            Practica1.Leave += textBox4_Leave;
+            calificacion1.Location = new Point(530, 672);
+            calificacion1.Name = "calificacion1";
+            calificacion1.Size = new Size(109, 31);
+            calificacion1.TabIndex = 11;
+            calificacion1.TextChanged += textBox4_TextChanged;
+            calificacion1.KeyPress += textBox4_KeyPress;
+            calificacion1.Leave += textBox4_Leave;
             // 
-            // Examen1
+            // calificacion_examen1
             // 
-            Examen1.Location = new Point(50, 672);
-            Examen1.Name = "Examen1";
-            Examen1.Size = new Size(109, 31);
-            Examen1.TabIndex = 12;
-            Examen1.TextChanged += textBox5_TextChanged;
-            Examen1.KeyPress += textBox4_KeyPress;
-            Examen1.Leave += textBox5_Leave;
+            calificacion_examen1.Location = new Point(50, 672);
+            calificacion_examen1.Name = "calificacion_examen1";
+            calificacion_examen1.Size = new Size(109, 31);
+            calificacion_examen1.TabIndex = 12;
+            calificacion_examen1.TextChanged += textBox5_TextChanged;
+            calificacion_examen1.KeyPress += textBox4_KeyPress;
+            calificacion_examen1.Leave += textBox5_Leave;
             // 
-            // Examen2
+            // calificacion_examen2
             // 
-            Examen2.Location = new Point(217, 672);
-            Examen2.Name = "Examen2";
-            Examen2.Size = new Size(109, 31);
-            Examen2.TabIndex = 13;
-            Examen2.TextChanged += textBox6_TextChanged;
-            Examen2.KeyPress += textBox4_KeyPress;
-            Examen2.Leave += textBox6_Leave;
+            calificacion_examen2.Location = new Point(217, 672);
+            calificacion_examen2.Name = "calificacion_examen2";
+            calificacion_examen2.Size = new Size(109, 31);
+            calificacion_examen2.TabIndex = 13;
+            calificacion_examen2.TextChanged += textBox6_TextChanged;
+            calificacion_examen2.KeyPress += textBox4_KeyPress;
+            calificacion_examen2.Leave += textBox6_Leave;
             // 
-            // Examen3
+            // calificaion_examen3
             // 
-            Examen3.Location = new Point(373, 672);
-            Examen3.Name = "Examen3";
-            Examen3.Size = new Size(109, 31);
-            Examen3.TabIndex = 14;
-            Examen3.TextChanged += textBox7_TextChanged;
-            Examen3.KeyPress += textBox4_KeyPress;
-            Examen3.Leave += textBox7_Leave;
+            calificaion_examen3.Location = new Point(373, 672);
+            calificaion_examen3.Name = "calificaion_examen3";
+            calificaion_examen3.Size = new Size(109, 31);
+            calificaion_examen3.TabIndex = 14;
+            calificaion_examen3.TextChanged += textBox7_TextChanged;
+            calificaion_examen3.KeyPress += textBox4_KeyPress;
+            calificaion_examen3.Leave += textBox7_Leave;
             // 
             // menuStrip1
             // 
@@ -374,25 +374,25 @@
             status.Name = "status";
             status.Width = 150;
             // 
-            // calf3
+            // calificacion3
             // 
-            calf3.Location = new Point(808, 672);
-            calf3.Name = "calf3";
-            calf3.Size = new Size(109, 31);
-            calf3.TabIndex = 18;
-            calf3.TextChanged += textBox8_TextChanged;
-            calf3.KeyPress += textBox8_KeyPress;
-            calf3.Leave += textBox8_Leave;
+            calificacion3.Location = new Point(808, 672);
+            calificacion3.Name = "calificacion3";
+            calificacion3.Size = new Size(109, 31);
+            calificacion3.TabIndex = 18;
+            calificacion3.TextChanged += textBox8_TextChanged;
+            calificacion3.KeyPress += textBox8_KeyPress;
+            calificacion3.Leave += textBox8_Leave;
             // 
-            // calf2
+            // calificacion2
             // 
-            calf2.Location = new Point(665, 672);
-            calf2.Name = "calf2";
-            calf2.Size = new Size(109, 31);
-            calf2.TabIndex = 19;
-            calf2.TextChanged += textBox9_TextChanged;
-            calf2.KeyPress += textBox9_KeyPress;
-            calf2.Leave += textBox9_Leave;
+            calificacion2.Location = new Point(665, 672);
+            calificacion2.Name = "calificacion2";
+            calificacion2.Size = new Size(109, 31);
+            calificacion2.TabIndex = 19;
+            calificacion2.TextChanged += textBox9_TextChanged;
+            calificacion2.KeyPress += textBox9_KeyPress;
+            calificacion2.Leave += textBox9_Leave;
             // 
             // label9
             // 
@@ -424,14 +424,14 @@
             ClientSize = new Size(1821, 1050);
             Controls.Add(label10);
             Controls.Add(label9);
-            Controls.Add(calf2);
-            Controls.Add(calf3);
+            Controls.Add(calificacion2);
+            Controls.Add(calificacion3);
             Controls.Add(dataGridView1);
             Controls.Add(Calcular);
-            Controls.Add(Examen3);
-            Controls.Add(Examen2);
-            Controls.Add(Examen1);
-            Controls.Add(Practica1);
+            Controls.Add(calificaion_examen3);
+            Controls.Add(calificacion_examen2);
+            Controls.Add(calificacion_examen1);
+            Controls.Add(calificacion1);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -469,10 +469,10 @@
         private Label label6;
         private Label label7;
         private Label label8;
-        private TextBox Practica1;
-        private TextBox Examen1;
-        private TextBox Examen2;
-        private TextBox Examen3;
+        private TextBox calificacion1;
+        private TextBox calificacion_examen1;
+        private TextBox calificacion_examen2;
+        private TextBox calificaion_examen3;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem registrosPasadosToolStripMenuItem;
         private ToolStripMenuItem eliminarRegistrosToolStripMenuItem;
@@ -480,8 +480,8 @@
         private ToolStripMenuItem registrosPasadosToolStripMenuItem1;
         private Button Calcular;
         private DataGridView dataGridView1;
-        private TextBox calf3;
-        private TextBox calf2;
+        private TextBox calificacion3;
+        private TextBox calificacion2;
         private Label label9;
         private Label label10;
         private DataGridViewTextBoxColumn Nombre_estudiante;
