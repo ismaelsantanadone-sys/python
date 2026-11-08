@@ -44,53 +44,75 @@ namespace proyecto_final
 
         private void guardarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string ruta = @"C:\Users\HP\source\repos\nucleo\registros.json";
-            if (dataGridView1.Rows.Count == 0 || (dataGridView1.Rows.Count == 1 && dataGridView1.Rows[0].IsNewRow))
+
+            string ruta = @"C:\Users\HP\Pictures\Camera Roll\registros.Json";
+
+            if (Lista.Rows.Count == 0 ||
+                (Lista.Rows.Count == 1 && Lista.Rows[0].IsNewRow))
             {
-                MessageBox.Show("No hay datos en la tabla para guardar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No hay datos en la tabla para guardar.");
                 return;
             }
+
             try
             {
-                var listaRegistros = new List<Dictionary<string, string>>();
-                var columnasVisibles = dataGridView1.Columns.Cast<DataGridViewColumn>()
-                                                         .Where(c => c.Visible)
-                                                         .ToList();
-                foreach (DataGridViewRow fila in dataGridView1.Rows)
-                {
+                List<Dictionary<string, string>> listaRegistros =
+                    new List<Dictionary<string, string>>();
 
+                if (File.Exists(ruta))
+                {
+                    string jsonAnterior = File.ReadAllText(ruta);
+
+                    if (!string.IsNullOrWhiteSpace(jsonAnterior))
+                    {
+                        listaRegistros =
+                            JsonSerializer.Deserialize<List<Dictionary<string, string>>>(jsonAnterior)
+                            ?? new List<Dictionary<string, string>>();
+                    }
+                }
+                var columnasVisibles = Lista.Columns
+                    .Cast<DataGridViewColumn>()
+                    .Where(c => c.Visible)
+                    .ToList();
+                foreach (DataGridViewRow fila in Lista.Rows)
+                {
                     if (!fila.IsNewRow)
                     {
                         var datosFila = new Dictionary<string, string>();
 
                         foreach (var col in columnasVisibles)
                         {
-                            object valorCelda = fila.Cells[col.Index].Value;
-                            string texto = valorCelda != null ? valorCelda.ToString() : "";
+                            object valor = fila.Cells[col.Index].Value;
 
-
-                            datosFila[col.HeaderText] = texto;
+                            datosFila[col.HeaderText] =
+                                valor != null ? valor.ToString() : "";
                         }
 
                         listaRegistros.Add(datosFila);
+
                     }
                 }
+                var opciones = new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                };
 
-                var opciones = new JsonSerializerOptions { WriteIndented = true };
-                string jsonString = JsonSerializer.Serialize(listaRegistros, opciones);
+                string jsonString =
+                    JsonSerializer.Serialize(listaRegistros, opciones);
 
                 string directorio = Path.GetDirectoryName(ruta);
+
                 if (!Directory.Exists(directorio))
-                {
                     Directory.CreateDirectory(directorio);
-                }
 
                 File.WriteAllText(ruta, jsonString);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrió un error al guardar el archivo ");
+                MessageBox.Show("Error al guardar: " + ex.Message);
             }
+            Lista.DataSource = null;
+            Lista.Rows.Clear();
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -178,7 +200,7 @@ namespace proyecto_final
                 string apellido = this.apellido.Text;
                 string matricula = this.matricula.Text;
 
-                dataGridView1.Rows.Add(nombre, apellido, matricula, examen1, examen2, examen3, practica1, practica2, practica3, porcentaje_examen, porcentaje_practica, promedio, calcular.status);
+                Lista.Rows.Add(nombre, apellido, matricula, examen1, examen2, examen3, practica1, practica2, practica3, porcentaje_examen, porcentaje_practica, promedio, calcular.status);
 
             }
             else

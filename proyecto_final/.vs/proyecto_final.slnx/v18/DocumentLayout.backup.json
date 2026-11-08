@@ -7,16 +7,12 @@
       "RelativeMoniker": "D:0:0:{ED6D81BC-67DA-B601-1540-04AC251F394A}|proyecto_final.csproj|solutionrelative:registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED6D81BC-67DA-B601-1540-04AC251F394A}|proyecto_final.csproj|C:\\Users\\HP\\source\\repos\\proyecto_final\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ED6D81BC-67DA-B601-1540-04AC251F394A}|proyecto_final.csproj|solutionrelative:registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ED6D81BC-67DA-B601-1540-04AC251F394A}|proyecto_final.csproj|c:\\users\\hp\\source\\repos\\proyecto_final\\nucleo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED6D81BC-67DA-B601-1540-04AC251F394A}|proyecto_final.csproj|solutionrelative:nucleo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED6D81BC-67DA-B601-1540-04AC251F394A}|proyecto_final.csproj|C:\\Users\\HP\\source\\repos\\proyecto_final\\nucleo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ED6D81BC-67DA-B601-1540-04AC251F394A}|proyecto_final.csproj|solutionrelative:nucleo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{ED6D81BC-67DA-B601-1540-04AC251F394A}|proyecto_final.csproj|C:\\Users\\HP\\source\\repos\\proyecto_final\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ED6D81BC-67DA-B601-1540-04AC251F394A}|proyecto_final.csproj|solutionrelative:registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,28 +26,21 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Nucleo.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\proyecto_final\\Nucleo.cs",
               "RelativeDocumentMoniker": "Nucleo.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\proyecto_final\\Nucleo.cs",
               "RelativeToolTip": "Nucleo.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwC4AAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAqwN0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-07T16:01:34.542Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Nucleo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\proyecto_final\\Nucleo.cs",
-              "RelativeDocumentMoniker": "Nucleo.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\proyecto_final\\Nucleo.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Nucleo.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T16:01:28.636Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
@@ -61,14 +50,14 @@
               "RelativeDocumentMoniker": "Registro.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\proyecto_final\\Registro.cs*",
               "RelativeToolTip": "Registro.cs*",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T16:00:59.183Z",
+              "WhenOpened": "2026-11-08T15:14:21.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Registro.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\proyecto_final\\Registro.cs",
               "RelativeDocumentMoniker": "Registro.cs",

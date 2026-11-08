@@ -50,7 +50,7 @@
             guardarRegistroToolStripMenuItem = new ToolStripMenuItem();
             registrosPasadosToolStripMenuItem1 = new ToolStripMenuItem();
             Calcular = new Button();
-            dataGridView1 = new DataGridView();
+            Lista = new DataGridView();
             Nombre_estudiante = new DataGridViewTextBoxColumn();
             Apellido_estudiante = new DataGridViewTextBoxColumn();
             Matricula_estudiante = new DataGridViewTextBoxColumn();
@@ -69,7 +69,7 @@
             label9 = new Label();
             label10 = new Label();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Lista).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -242,7 +242,7 @@
             // 
             eliminarRegistrosToolStripMenuItem.Image = (Image)resources.GetObject("eliminarRegistrosToolStripMenuItem.Image");
             eliminarRegistrosToolStripMenuItem.Name = "eliminarRegistrosToolStripMenuItem";
-            eliminarRegistrosToolStripMenuItem.Size = new Size(270, 34);
+            eliminarRegistrosToolStripMenuItem.Size = new Size(259, 34);
             eliminarRegistrosToolStripMenuItem.Text = "Eliminar registros";
             eliminarRegistrosToolStripMenuItem.Click += eliminarRegistrosToolStripMenuItem_Click;
             // 
@@ -250,7 +250,7 @@
             // 
             guardarRegistroToolStripMenuItem.Image = (Image)resources.GetObject("guardarRegistroToolStripMenuItem.Image");
             guardarRegistroToolStripMenuItem.Name = "guardarRegistroToolStripMenuItem";
-            guardarRegistroToolStripMenuItem.Size = new Size(270, 34);
+            guardarRegistroToolStripMenuItem.Size = new Size(259, 34);
             guardarRegistroToolStripMenuItem.Text = "Guardar registro";
             guardarRegistroToolStripMenuItem.Click += guardarRegistroToolStripMenuItem_Click;
             // 
@@ -258,7 +258,7 @@
             // 
             registrosPasadosToolStripMenuItem1.Image = (Image)resources.GetObject("registrosPasadosToolStripMenuItem1.Image");
             registrosPasadosToolStripMenuItem1.Name = "registrosPasadosToolStripMenuItem1";
-            registrosPasadosToolStripMenuItem1.Size = new Size(270, 34);
+            registrosPasadosToolStripMenuItem1.Size = new Size(259, 34);
             registrosPasadosToolStripMenuItem1.Text = "Registros pasados";
             registrosPasadosToolStripMenuItem1.Click += registrosPasadosToolStripMenuItem1_Click;
             // 
@@ -274,16 +274,16 @@
             Calcular.UseVisualStyleBackColor = false;
             Calcular.Click += Calcular_Click;
             // 
-            // dataGridView1
+            // Lista
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Nombre_estudiante, Apellido_estudiante, Matricula_estudiante, Primer_examen, Segundo_examen, tercer_examen, Practica, practica2, practica3, Porcentaje_examen, porcentaje_practica, promedio, status });
-            dataGridView1.Location = new Point(0, 728);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1838, 225);
-            dataGridView1.TabIndex = 17;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            Lista.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Lista.Columns.AddRange(new DataGridViewColumn[] { Nombre_estudiante, Apellido_estudiante, Matricula_estudiante, Primer_examen, Segundo_examen, tercer_examen, Practica, practica2, practica3, Porcentaje_examen, porcentaje_practica, promedio, status });
+            Lista.Location = new Point(1, 728);
+            Lista.Name = "Lista";
+            Lista.RowHeadersWidth = 62;
+            Lista.Size = new Size(1838, 225);
+            Lista.TabIndex = 17;
+            Lista.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Nombre_estudiante
             // 
@@ -428,7 +428,7 @@
             Controls.Add(label9);
             Controls.Add(calificacion2);
             Controls.Add(calificacion3);
-            Controls.Add(dataGridView1);
+            Controls.Add(Lista);
             Controls.Add(Calcular);
             Controls.Add(calificaion_examen3);
             Controls.Add(calificacion_examen2);
@@ -453,7 +453,7 @@
             Load += Nucleo_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Lista).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -481,7 +481,7 @@
         private ToolStripMenuItem guardarRegistroToolStripMenuItem;
         private ToolStripMenuItem registrosPasadosToolStripMenuItem1;
         private Button Calcular;
-        private DataGridView dataGridView1;
+        private DataGridView Lista;
         private TextBox calificacion3;
         private TextBox calificacion2;
         private Label label9;

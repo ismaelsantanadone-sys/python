@@ -16,14 +16,15 @@ namespace proyecto_final
         public Registro()
         {
             InitializeComponent();
+         string archivo = File.ReadAllText(@"C:\Users\HP\Pictures\Camera Roll\registros.Json");
+         DataTable tabla = JsonConvert.DeserializeObject<DataTable>(archivo);
+         lista.DataSource=tabla;
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
-        private void Registro_pasado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        { string ruta = File.ReadAllText(@"C:\Users\HP\source\repos\nucleo\registros.json");
-           DataTable tabla=(DataTable)JsonConvert.DeserializeObject(ruta,typeof(DataTable));
-            Registro_pasado.DataSource = tabla;
-            Registro_pasado.Refresh();
-        }
+       
     }
 }
