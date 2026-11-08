@@ -242,14 +242,15 @@
             // 
             eliminarRegistrosToolStripMenuItem.Image = (Image)resources.GetObject("eliminarRegistrosToolStripMenuItem.Image");
             eliminarRegistrosToolStripMenuItem.Name = "eliminarRegistrosToolStripMenuItem";
-            eliminarRegistrosToolStripMenuItem.Size = new Size(259, 34);
+            eliminarRegistrosToolStripMenuItem.Size = new Size(270, 34);
             eliminarRegistrosToolStripMenuItem.Text = "Eliminar registros";
+            eliminarRegistrosToolStripMenuItem.Click += eliminarRegistrosToolStripMenuItem_Click;
             // 
             // guardarRegistroToolStripMenuItem
             // 
             guardarRegistroToolStripMenuItem.Image = (Image)resources.GetObject("guardarRegistroToolStripMenuItem.Image");
             guardarRegistroToolStripMenuItem.Name = "guardarRegistroToolStripMenuItem";
-            guardarRegistroToolStripMenuItem.Size = new Size(259, 34);
+            guardarRegistroToolStripMenuItem.Size = new Size(270, 34);
             guardarRegistroToolStripMenuItem.Text = "Guardar registro";
             guardarRegistroToolStripMenuItem.Click += guardarRegistroToolStripMenuItem_Click;
             // 
@@ -257,8 +258,9 @@
             // 
             registrosPasadosToolStripMenuItem1.Image = (Image)resources.GetObject("registrosPasadosToolStripMenuItem1.Image");
             registrosPasadosToolStripMenuItem1.Name = "registrosPasadosToolStripMenuItem1";
-            registrosPasadosToolStripMenuItem1.Size = new Size(259, 34);
+            registrosPasadosToolStripMenuItem1.Size = new Size(270, 34);
             registrosPasadosToolStripMenuItem1.Text = "Registros pasados";
+            registrosPasadosToolStripMenuItem1.Click += registrosPasadosToolStripMenuItem1_Click;
             // 
             // Calcular
             // 

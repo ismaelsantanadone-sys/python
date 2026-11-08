@@ -18,3 +18,6 @@ C:\Users\HP\source\repos\proyecto_final\obj\Debug\net10.0-windows\proyecto_final
 C:\Users\HP\source\repos\proyecto_final\obj\Debug\net10.0-windows\proyecto_final.Nucleo.resources
 C:\Users\HP\source\repos\proyecto_final\obj\Debug\net10.0-windows\proyecto_final.Properties.Resources.resources
 C:\Users\HP\source\repos\proyecto_final\obj\Debug\net10.0-windows\proyecto_final.sourcelink.json
+C:\Users\HP\source\repos\proyecto_final\obj\Debug\net10.0-windows\proyecto_final.Registro.resources
+C:\Users\HP\source\repos\proyecto_final\bin\Debug\net10.0-windows\Newtonsoft.Json.dll
+C:\Users\HP\source\repos\proyecto_final\obj\Debug\net10.0-windows\proyecto_final.csproj.AssemblyReference.cache

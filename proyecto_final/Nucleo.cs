@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
+using System.Text.Json;
 using System.Windows.Forms;
-using System.IO;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace proyecto_final
@@ -30,7 +31,7 @@ namespace proyecto_final
             {
                 e.Handled = true;
             }
-            Calcular.Enabled=!string .IsNullOrEmpty(calificacion1.Text)&& !string.IsNullOrEmpty(nombre.Text)&& !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
+            Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
              && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
              && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
 
@@ -43,9 +44,54 @@ namespace proyecto_final
 
         private void guardarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string ruta = @"C:\Users\HP\source\repos\nucleo\registros.json";
+            if (dataGridView1.Rows.Count == 0 || (dataGridView1.Rows.Count == 1 && dataGridView1.Rows[0].IsNewRow))
+            {
+                MessageBox.Show("No hay datos en la tabla para guardar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            try
+            {
+                var listaRegistros = new List<Dictionary<string, string>>();
+                var columnasVisibles = dataGridView1.Columns.Cast<DataGridViewColumn>()
+                                                         .Where(c => c.Visible)
+                                                         .ToList();
+                foreach (DataGridViewRow fila in dataGridView1.Rows)
+                {
 
+                    if (!fila.IsNewRow)
+                    {
+                        var datosFila = new Dictionary<string, string>();
+
+                        foreach (var col in columnasVisibles)
+                        {
+                            object valorCelda = fila.Cells[col.Index].Value;
+                            string texto = valorCelda != null ? valorCelda.ToString() : "";
+
+
+                            datosFila[col.HeaderText] = texto;
+                        }
+
+                        listaRegistros.Add(datosFila);
+                    }
+                }
+
+                var opciones = new JsonSerializerOptions { WriteIndented = true };
+                string jsonString = JsonSerializer.Serialize(listaRegistros, opciones);
+
+                string directorio = Path.GetDirectoryName(ruta);
+                if (!Directory.Exists(directorio))
+                {
+                    Directory.CreateDirectory(directorio);
+                }
+
+                File.WriteAllText(ruta, jsonString);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error al guardar el archivo ");
+            }
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
@@ -113,26 +159,26 @@ namespace proyecto_final
             Calcular.Enabled = !string.IsNullOrEmpty(calificacion1.Text) && !string.IsNullOrEmpty(nombre.Text) && !string.IsNullOrEmpty(matricula.Text) && !string.IsNullOrEmpty(apellido.Text)
             && !string.IsNullOrEmpty(calificacion_examen1.Text) && !string.IsNullOrEmpty(calificacion_examen2.Text) && !string.IsNullOrEmpty(calificaion_examen3.Text) && !string.IsNullOrEmpty(calificacion2.Text)
             && !string.IsNullOrEmpty(calificacion3.Text) && !string.IsNullOrEmpty(calificacion1.Text);
-            float examen1,examen2, examen3;
-            float practica1,practica2,practica3;
+            float examen1, examen2, examen3;
+            float practica1, practica2, practica3;
             double promedio, porcentaje_examen, porcentaje_practica;
             Calcular calcular = new Calcular();
             if (float.TryParse(this.calificacion1.Text, out examen1) &&
                 float.TryParse(calificacion_examen1.Text, out examen2) &&
                 float.TryParse(calificacion_examen2.Text, out examen3) &&
                 float.TryParse(calificaion_examen3.Text, out practica1) &&
-                float.TryParse(calificacion3.Text,out practica2)&&
-                float.TryParse(calificacion2.Text,out practica3))
+                float.TryParse(calificacion3.Text, out practica2) &&
+                float.TryParse(calificacion2.Text, out practica3))
             {
-              
+
                 promedio = calcular.Promedio(examen1, examen2, examen3, practica1, practica2, practica3);
                 porcentaje_examen = Math.Round(calcular.porcentaje_examen, 1);
-                porcentaje_practica=Math.Round(calcular.porcentaje_practica, 1);
+                porcentaje_practica = Math.Round(calcular.porcentaje_practica, 1);
                 string nombre = this.nombre.Text;
                 string apellido = this.apellido.Text;
                 string matricula = this.matricula.Text;
 
-                dataGridView1.Rows.Add(nombre, apellido, matricula, examen1, examen2, examen3, practica1, practica2, practica3, porcentaje_examen, porcentaje_practica, promedio,calcular.status);
+                dataGridView1.Rows.Add(nombre, apellido, matricula, examen1, examen2, examen3, practica1, practica2, practica3, porcentaje_examen, porcentaje_practica, promedio, calcular.status);
 
             }
             else
@@ -197,7 +243,7 @@ namespace proyecto_final
 
         private void textBox5_Leave(object sender, EventArgs e)
         {
-          
+
             if (float.TryParse(calificacion_examen1.Text, out float valor))
             {
                 if (valor > 100)
@@ -216,7 +262,7 @@ namespace proyecto_final
 
         private void textBox6_Leave(object sender, EventArgs e)
         {
-           
+
             if (float.TryParse(calificacion_examen2.Text, out float valor))
             {
                 if (valor > 100)
@@ -234,7 +280,7 @@ namespace proyecto_final
 
         private void textBox7_Leave(object sender, EventArgs e)
         {
-           
+
             if (float.TryParse(calificaion_examen3.Text, out float valor))
             {
                 if (valor > 100)
@@ -252,7 +298,7 @@ namespace proyecto_final
 
         private void textBox4_Leave(object sender, EventArgs e)
         {
-           
+
             if (float.TryParse(calificacion1.Text, out float valor))
             {
                 if (valor > 100)
@@ -270,7 +316,7 @@ namespace proyecto_final
 
         private void textBox9_Leave(object sender, EventArgs e)
         {
-           
+
             if (float.TryParse(calificacion2.Text, out float valor))
             {
                 if (valor > 100)
@@ -317,6 +363,19 @@ namespace proyecto_final
             {
                 e.Handled = true;
             }
+        }
+
+        private void registrosPasadosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            Registro ventana3 = new Registro();
+            ventana3.Show();
+        }
+
+        private void eliminarRegistrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registro ventana3 = new Registro();
+            ventana3.Show();
         }
     }
     public class Calcular

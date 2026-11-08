@@ -1,0 +1,17 @@
+[
+  {
+    "Nombre": "ismael",
+    "Apellido": "santana",
+    "Matricula": "100746738",
+    "Primer examen": "78",
+    "segundo examen": "100",
+    "Examen final": "60",
+    "Practica": "100",
+    "Practica#2": "100",
+    "Practica#3": "50",
+    "Porcentace de examen": "47.6",
+    "Porcentaje de practica": "33.3",
+    "Promedio": "81",
+    "Estado": "Promovido"
+  }
+]
